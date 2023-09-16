@@ -1,0 +1,244 @@
+:root {
+    --color-grey-light-1: #EEEEEE;
+    --color-grey-light-2: #DDE6ED;
+    --color-grey-light-3: #D8D9DA;
+    
+    --color-grey-dark-1: #777;
+    --color-grey-dark-2: #999;
+    --color-grey-dark-3: #333;
+    --color-grey-dark-4: #0F0E0E;
+    
+    --color-white: #fff;
+    --color-black: #000;
+
+    --color-js: #F7DF1E;
+    --color-react: #61DAFB;
+    --color-rust: #E55604;
+    --color-mongodb: #4FAA41;
+    --color-node: #8CC84B;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+@media only screen and (max-width: 75em) {
+    html {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    line-height: 1.6;
+    color: var(--color-grey-light-1);
+    background-image: linear-gradient(to right bottom, var(--color-grey-dark-3), var(--color-grey-dark-4));
+    background-repeat: no-repeat;
+    padding: 0 6rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    z-index: 0;
+}
+
+h1 {    
+    font-weight: 400;
+    letter-spacing: .4rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+main {
+    margin-top: 8rem;
+}
+
+.header {
+    height: 10rem;
+    min-width: 100vw;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.header > a {
+    font-size: 3rem;
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+
+.header > ul {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header > ul > li {
+    padding: 2rem;
+    cursor: pointer;
+}
+
+.header > ul > li:hover {
+    color: var(--color-grey-dark-1);
+    text-decoration: underline;
+    transform: translateY(-3px);
+    box-shadow: 0 .1rem .2rem rgb(255, 255, 255, .1);
+}
+
+.header > ul > li::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.current_projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    margin-bottom: 4rem;
+}
+
+.current_projects > * {
+    padding: 4rem;
+    font-size: 1.5rem;
+}
+
+.current_projects > h1, .in_progress > h1 { 
+    font-size: 4rem;
+    color: var(--color-grey-light-1);
+    text-shadow: 0 3rem 4rem rgba(255,255,255,.2);
+    letter-spacing: .5rem;
+}
+
+.js, .react, .rust, .mongo-db, .express, .react2, .node {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    text-transform: none;
+    word-spacing: .7rem;
+    margin-right: 1rem;
+}
+
+.js > * {
+    padding: 0 5rem;
+    text-transform: none;
+}
+
+.js > h2, .react > h2, .rust > h2, .mongo-db > h2, .express > h2, .react2 > h2, .node > h2 {
+    border-left: solid var(--color-grey-light-1);
+    border-width: 1px;
+}
+
+.js > h2:hover {
+    color: var(--color-js);
+    cursor: pointer;
+}
+
+.react > * {
+    padding: 0 5rem;
+}
+
+.react > h2:hover {
+    color: var(--color-react);
+    cursor: pointer;
+}
+
+.react > p {
+    margin-left: 5.5rem;
+}
+
+.rust > * {
+    padding: 0 5rem;
+    text-transform: none;
+}
+
+.rust > h2:hover {
+    color: var(--color-rust);
+    cursor: pointer;
+}
+
+.rust > p {
+    margin-left: 7rem;
+}
+
+
+.in_progress {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+.in_progress > * {
+    padding: 4rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.mongo-db > * {
+    padding: 0 5rem;
+}
+
+.mongo-db > h2:hover {
+    color: var(--color-mongodb);
+}
+
+.express > * {
+    padding: 0 5rem;
+}
+
+.express > h2:hover {
+    color: var(--color-grey-dark-2)
+}
+
+.express > p {
+    margin-left: 3rem;
+}
+
+.react2 > * {
+    padding: 0 5rem;
+}
+
+.react2 > h2:hover {
+    color: var(--color-react);
+}
+
+.react2 > p {
+    margin-left: 5.8rem;
+}
+
+.node > * {
+    padding: 0 5rem;
+}
+
+.node > h2:hover {
+    color: var(--color-node);
+}
+
+.node > p {
+    margin-left: 6rem;
+}

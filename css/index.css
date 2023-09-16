@@ -1,0 +1,152 @@
+:root {
+    --color-grey-light-1: #EEEEEE;
+    --color-grey-light-2: #DDE6ED;
+    --color-grey-light-3: #D8D9DA;
+    
+    --color-grey-dark-1: #777;
+    --color-grey-dark-2: #999;
+    --color-grey-dark-3: #333;
+    --color-grey-dark-4: #0F0E0E;
+    
+    --color-white: #fff;
+    --color-black: #000;
+
+    --breakpoint-mobile: 500px;
+    --breakpoint-tablet: 800px;
+    --breakpoint-desktop: 1000px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+  
+}
+
+@media only screen and (max-width: 75em) {
+    html {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    line-height: 1.6;
+    color: var(--color-grey-light-1);
+    background-image: linear-gradient(to right bottom, var(--color-grey-dark-3), var(--color-grey-dark-4));
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding: 0 6rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    z-index: 0;
+}
+
+h1 {    
+    font-weight: 400;
+    letter-spacing: .4rem;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+main {
+    margin-top: 40rem;
+}
+
+.header {
+    height: 10rem;
+    min-width: 100vw;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.header > a {
+    font-size: 3rem;
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+
+.header > ul {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header > ul > li {
+    padding: 2rem;
+    cursor: pointer;
+}
+
+.header > ul > li:hover {
+    color: var(--color-grey-dark-1);
+    text-decoration: underline;
+    transform: translateY(-3px);
+    box-shadow: 0 .1rem .2rem rgb(255, 255, 255, .1);
+}
+
+.header > ul > li::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.titles > h1 {
+    font-size: 6rem;
+    color: var(--color-grey-light-1);
+    text-shadow: 1rem 1rem 3rem rgb(255, 255, 255, 1);
+    letter-spacing: .5rem;
+}
+
+.mission {
+    margin-top: 30rem;
+    padding: 5rem;
+    position: relative
+}
+
+.mission > h1 {
+    font-size: 3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.mission > p {
+    font-size: 2rem;
+    text-transform: none;
+    max-width: 80rem;
+    margin-top: 3rem;
+}
+
+
