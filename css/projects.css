@@ -239,6 +239,6 @@ main {
     color: var(--color-node);
 }
 
-.node > p {
+.node > p { 
     margin-left: 6rem;
 }
